@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón de arrepentimiento | Tienda FL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+```
+<header>
+    <div class="container">
+        <a href="index.html">
+            <img src="TiendaFLlogo.png" alt="Tienda FL" class="logo">
+        </a>
+    </div>
+</header>
+
+<main class="legal-page">
+    <div class="container">
+        <h1>Botón de arrepentimiento</h1>
+
+        <p>
+            Si realizaste una compra a distancia y querés ejercer tu
+            derecho de arrepentimiento, podés solicitar la cancelación
+            de la operación mediante este formulario.
+        </p>
+
+        <form id="arrepentimientoForm">
+
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="pedido">Número o referencia del pedido</label>
+            <input type="text" id="pedido" name="pedido" required>
+
+            <label for="motivo">Motivo / detalle</label>
+            <textarea id="motivo" name="motivo" rows="5"></textarea>
+
+            <button type="submit" class="btn-primary">
+                Solicitar arrepentimiento
+            </button>
+
+        </form>
+
+        <p class="legal-note">
+            También podés comunicarte directamente con Tienda FL
+            mediante WhatsApp para coordinar la solicitud.
+        </p>
+
+        <a
+            href="https://wa.me/5493512782140"
+            target="_blank"
+            class="btn-primary"
+        >
+            Contactar por WhatsApp
+        </a>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Tienda FL. Todos los derechos reservados.</p>
+
+        <div class="footer-links">
+            <a href="terminos.html">Términos y condiciones</a>
+            <a href="arrepentimiento.html">Botón de arrepentimiento</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("arrepentimientoForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById("nombre").value;
+        const telefono = document.getElementById("telefono").value;
+        const pedido = document.getElementById("pedido").value;
+        const motivo = document.getElementById("motivo").value;
+
+        const mensaje =
+            `SOLICITUD DE ARREPENTIMIENTO%0A%0A` +
+            `Nombre: ${nombre}%0A` +
+            `Teléfono: ${telefono}%0A` +
+            `Pedido: ${pedido}%0A` +
+            `Detalle: ${motivo}`;
+
+        window.open(
+            `https://wa.me/5493512782140?text=${mensaje}`,
+            "_blank"
+        );
+    });
+</script>
+```
+
+</body>
+</html>
