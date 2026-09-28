@@ -682,3 +682,157 @@ footer p:last-child {
 .web-service a:hover {
     text-decoration: underline;
 }
+/* ========================================
+   PÁGINAS LEGALES
+======================================== */
+
+.legal-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 90px 7% 110px;
+    background: white;
+}
+
+.legal-page h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    letter-spacing: -3px;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.legal-update {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 45px;
+}
+
+.legal-page h2 {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.legal-page p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.legal-page a:not(.hero-button) {
+    color: #7c3aed;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.legal-page a:not(.hero-button):hover {
+    text-decoration: underline;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    margin-top: 20px;
+    padding: 22px 25px;
+
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+}
+
+.contact-box strong {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contact-box span {
+    color: #777;
+    font-size: 14px;
+}
+
+.legal-back {
+    margin-top: 45px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #0d0d0f;
+    color: white;
+    padding: 55px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+
+    font-size: 13px;
+}
+
+footer p {
+    margin: 0 0 7px;
+}
+
+footer p:last-child {
+    color: #777;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* ========================================
+   LEGAL - CELULAR
+======================================== */
+
+@media (max-width: 650px) {
+
+    .legal-page {
+        padding: 65px 5% 80px;
+    }
+
+    .legal-page h1 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .legal-page h2 {
+        font-size: 21px;
+        margin-top: 35px;
+    }
+
+    .legal-page p {
+        font-size: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .footer-links {
+        text-align: left;
+    }
+}
